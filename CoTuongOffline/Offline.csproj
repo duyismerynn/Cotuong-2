@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCD7E9C2-4291-4A44-A35F-72658774133E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CoTuongOffline</RootNamespace>
+    <AssemblyName>CoTuongOffline</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banco\Banco.cs" />
+    <Compile Include="Banco\Nuocdi.cs" />
+    <Compile Include="Banco\Quanco.cs" />
+    <Compile Include="Quanco\Ma.cs" />
+    <Compile Include="Quanco\Phao.cs" />
+    <Compile Include="Quanco\Si.cs" />
+    <Compile Include="Quanco\Tinh.cs" />
+    <Compile Include="Quanco\Tot.cs" />
+    <Compile Include="Quanco\Tuong.cs" />
+    <Compile Include="Quanco\Xe.cs" />
+    <Compile Include="CoTuongOffline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoTuongOffline.Designer.cs">
+      <DependentUpon>CoTuongOffline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Banco\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Banco\RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Banco\Thongso.cs" />
+    <Compile Include="Banco\Bandau_Phedo.cs" />
+    <Compile Include="Banco\Bandau_Phexanh.cs" />
+    <EmbeddedResource Include="CoTuongOffline.resx">
+      <DependentUpon>CoTuongOffline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BanCoTuong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey_square_target_depart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey_square_target_dest.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhaoDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhaoXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SiDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SiXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TinhDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TinhXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TuongDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TuongXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeXanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_square_target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LuatChoi\LuatChoi.csproj">
+      <Project>{0b440482-cbdc-413f-b807-1f4283ffa23c}</Project>
+      <Name>LuatChoi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhnen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
